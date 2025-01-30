@@ -37,7 +37,7 @@ public class ConfirmServlet extends HttpServlet{
 		
 		// メールアドレスのバリデーション
 		if(!"".equals(email.trim())) {
-			if(!email.matches("^[a-zA-Z0-9.]+@[a-zA-Z0-9.]+$")) {
+			if(!email.matches("^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\\.[a-zA-Z0-9]$")) {
 				errorList.add("メールアドレスの形式が不正です");
 			}
 		} else {
